@@ -69,7 +69,7 @@ export default function SpeakersComponent() {
     return (
         <section className="py-12 sm:py-16 lg:py-20">
             <div className="container mx-auto px-4 sm:px-6">
-                <div className="text-center mb-12 sm:mb-16">
+                <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
                     <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200 mb-3 sm:mb-4 text-xs sm:text-sm">
                         EXPERT SPEAKERS
                     </Badge>
@@ -85,7 +85,7 @@ export default function SpeakersComponent() {
                     {speakers.map((speaker, index) => (
                         <Card
                             key={index}
-                            className="group hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-blue-50 cursor-pointer"
+                            className="group hover:shadow-xl animate-on-scroll transition-all duration-300 border-0 bg-gradient-to-br from-white to-blue-50 cursor-pointer"
                             onClick={() => setSelected(index)}
                         >
                             <CardContent className="p-6 text-center">

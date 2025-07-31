@@ -52,10 +52,10 @@ export default function BenefitsComponent() {
     return (
         <section className="py-12 relative sm:py-16 lg:py-20 bg-gradient-to-br from-gray-900 to-blue-900">
             {/* include a background image */}
-            <div className="absolute inset-0 bg-[url('/about.png')] bg-cover bg-center opacity-10"></div>
+            <div className="absolute inset-0 bg-[url('/benefits-bg.jpg')] bg-cover bg-center opacity-30"></div>
 
             <div className="container mx-auto px-4 sm:px-6">
-                <div className="text-center mb-12 sm:mb-16">
+                <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
                     <Badge className="bg-yellow-400 !text-black hover:bg-yellow-500 mb-3 sm:mb-4 text-xs sm:text-sm">
                         KEY BENEFITS
                     </Badge>
@@ -71,7 +71,7 @@ export default function BenefitsComponent() {
                     {benefits.map((benefit, index) => (
                         <Card
                             key={index}
-                            className="bg-white/10 backdrop-blur-lg animate-fade-in-up border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                            className="bg-white/10 backdrop-blur-sm animate-fade-in-up border-white/20 hover:bg-white/20 transition-all duration-300 group"
                         >
                             <CardContent className="p-8 text-center">
                                 <div className="bg-yellow-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 animate-float-gentle">

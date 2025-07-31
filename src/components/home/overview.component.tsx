@@ -14,7 +14,7 @@ export default function OverviewComponent() {
                     <div className="relative order-2 lg:order-1 animate-on-scroll">
                         <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl sm:rounded-3xl opacity-20 blur-xl animate-pulse-slow"></div>
                         <Image
-                            src="/about.png"
+                            src="/overview.jpg"
                             alt="Financial compliance conference"
                             width={400}
                             height={200}

@@ -37,7 +37,7 @@ export default function ContactComponent() {
     return (
         <section id='contact' className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative overflow-hidden">
             {/* Background decorative elements */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none animate-on-scroll">
                 <div className="absolute top-10 left-10 w-20 h-20 bg-blue-100 rounded-full opacity-50"></div>
                 <div className="absolute top-40 right-20 w-16 h-16 bg-indigo-100 rounded-full opacity-40"></div>
                 <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-purple-100 rounded-full opacity-30"></div>
@@ -52,7 +52,7 @@ export default function ContactComponent() {
                 </svg>
             </div>
 
-            <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10 animate-on-scroll">
                 <div className="max-w-6xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-16">
@@ -60,7 +60,7 @@ export default function ContactComponent() {
                             EXCLUSIVE EVENT
                         </Badge>
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            Ready to Join Saudi Arabia's
+                            Ready to Join Saudi Arabia&apos;s
                             <span className="block text-blue-600">Financial Compliance Future?</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -191,7 +191,7 @@ export default function ContactComponent() {
                                                 </div>
                                                 <div>
                                                     <p className="text-green-800 font-medium">Registration Successful!</p>
-                                                    <p className="text-green-600 text-sm">We'll contact you within 24 hours with event details.</p>
+                                                    <p className="text-green-600 text-sm">We&apos;ll contact you within 24 hours with event details.</p>
                                                 </div>
                                             </div>
                                         )}
