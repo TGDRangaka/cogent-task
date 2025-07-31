@@ -16,8 +16,8 @@ export default function OverviewComponent() {
                         <Image
                             src="/about.png"
                             alt="Financial compliance conference"
-                            width={600}
-                            height={500}
+                            width={400}
+                            height={200}
                             className="relative rounded-2xl sm:rounded-3xl shadow-2xl w-full h-auto hover:scale-105 transition-transform duration-700 hover:shadow-3xl"
                         />
                     </div>
@@ -31,7 +31,7 @@ export default function OverviewComponent() {
                                 Shaping the Future of
                                 <span className="block text-blue-600 animate-text-shimmer">Financial Compliance</span>
                             </h2>
-                            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
+                            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                                 As a global leader in financial innovation and compliance, the Kingdom of Saudi Arabia continues to set benchmarks in Anti-Money Laundering (AML) efficiency and effectiveness. Despite these advancements and spending <span className="font-semibold text-blue-700">$1.10 billion</span> as cost of compliance, the country still lost <span className="font-semibold text-blue-700">5.74% of its gross domestic product (GDP)</span> to money laundering in 2023.<br /><br />
                                 Vision 2030 and the Saudi Central Bank&apos;s efforts embrace an innovation-centric, risk-based approach to anti-money laundering. This exclusive roundtable brings together compliance leaders and industry experts to discuss how financial institutions can embrace next-generation AML technologies with a compliance-first approach. Delve into cutting-edge strategies, regulatory updates, and technology trends shaping the future of financial crime compliance in Saudi Arabia.
                             </p>
