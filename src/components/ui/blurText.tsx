@@ -3,21 +3,41 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState, useMemo } from 'react';
 
+type AnimationSnapshot = Record<string, string | number>;
+
 const buildKeyframes = (
-    from: { [key: string]: any },
-    steps: Array<{ [key: string]: any }>
-) => {
+    from: AnimationSnapshot,
+    steps: AnimationSnapshot[]
+): Record<string, (string | number)[]> => {
     const keys = new Set([
         ...Object.keys(from),
         ...steps.flatMap((s) => Object.keys(s)),
     ]);
 
-    const keyframes: { [key: string]: any[] } = {};
+    const keyframes: Record<string, (string | number)[]> = {};
     keys.forEach((k) => {
-        keyframes[k] = [from[k], ...steps.map((s) => s[k])];
+        // Filter out undefined values for framer-motion compatibility
+        keyframes[k] = [from[k], ...steps.map((s) => s[k])].filter(
+            (v): v is string | number => v !== undefined
+        );
     });
     return keyframes;
 };
+
+interface BlurTextProps {
+    text?: string;
+    delay?: number;
+    className?: string;
+    animateBy?: 'words' | 'letters';
+    direction?: 'top' | 'bottom';
+    threshold?: number;
+    rootMargin?: string;
+    animationFrom?: AnimationSnapshot;
+    animationTo?: AnimationSnapshot[];
+    easing?: (t: number) => number;
+    onAnimationComplete?: () => void;
+    stepDuration?: number;
+}
 
 const BlurText = ({
     text = '',
@@ -29,13 +49,13 @@ const BlurText = ({
     rootMargin = '0px',
     animationFrom,
     animationTo,
-    easing = (t: any) => t,
+    easing = (t: number) => t,
     onAnimationComplete,
     stepDuration = 0.35,
-}: any) => {
+}: BlurTextProps) => {
     const elements = animateBy === 'words' ? text.split(' ') : text.split('');
     const [inView, setInView] = useState(false);
-    const ref = useRef(null);
+    const ref = useRef<HTMLParagraphElement | null>(null);
 
     useEffect(() => {
         if (!ref.current) return;
@@ -43,17 +63,16 @@ const BlurText = ({
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setInView(true);
-                    observer.unobserve(ref.current as any);
+                    if (ref.current) observer.unobserve(ref.current);
                 }
             },
             { threshold, rootMargin }
         );
         observer.observe(ref.current);
         return () => observer.disconnect();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [threshold, rootMargin]);
 
-    const defaultFrom = useMemo(
+    const defaultFrom = useMemo<AnimationSnapshot>(
         () =>
             direction === 'top'
                 ? { filter: 'blur(10px)', opacity: 0, y: -50 }
@@ -61,7 +80,7 @@ const BlurText = ({
         [direction]
     );
 
-    const defaultTo = useMemo(
+    const defaultTo = useMemo<AnimationSnapshot[]>(
         () => [
             {
                 filter: 'blur(5px)',
@@ -73,8 +92,8 @@ const BlurText = ({
         [direction]
     );
 
-    const fromSnapshot = animationFrom ?? defaultFrom;
-    const toSnapshots = animationTo ?? defaultTo;
+    const fromSnapshot: AnimationSnapshot = animationFrom ?? defaultFrom;
+    const toSnapshots: AnimationSnapshot[] = animationTo ?? defaultTo;
 
     const stepCount = toSnapshots.length + 1;
     const totalDuration = stepDuration * (stepCount - 1);
@@ -88,7 +107,7 @@ const BlurText = ({
             className={className}
             style={{ display: 'flex', flexWrap: 'wrap' }}
         >
-            {elements.map((segment: any, index: any) => {
+            {elements.map((segment: string, index: number) => {
                 const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
 
                 const spanTransition = {

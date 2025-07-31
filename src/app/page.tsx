@@ -1,29 +1,3 @@
-import Image from "next/image";
-
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectItem,
-} from "@/components/ui/select";
-
-import {
-  ArrowRight,
-  Calendar,
-  MapPin,
-  Users,
-  Shield,
-  TrendingUp,
-  Award,
-  Globe,
-  CheckCircle,
-} from "lucide-react";
 import HeroComponent from "@/components/home/hero.component";
 import OverviewComponent from "@/components/home/overview.component";
 import BenefitsComponent from "@/components/home/benefits.component";

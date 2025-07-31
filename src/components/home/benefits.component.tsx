@@ -63,7 +63,7 @@ export default function BenefitsComponent() {
                         Why Attend This Roundtable?
                     </h2>
                     <p className="text-base sm:text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto px-4">
-                        Discover the transformative benefits of joining Saudi Arabia's premier financial compliance event
+                        Discover the transformative benefits of joining Saudi Arabia&apos;s premier financial compliance event
                     </p>
                 </div>
 

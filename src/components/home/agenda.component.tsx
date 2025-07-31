@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, Card, CardContent } from '../ui'
+import { Badge } from '../ui'
 import Image from 'next/image'
 
 

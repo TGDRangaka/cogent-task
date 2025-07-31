@@ -19,6 +19,7 @@ export async function POST(req: NextRequest) {
     fs.writeFileSync(DATA_FILE, JSON.stringify(submissions, null, 2));
     return NextResponse.json({ success: true });
   } catch (e) {
+    console.error('Error saving submission:', e);
     return NextResponse.json({ error: 'Failed to save submission.' }, { status: 500 });
   }
 }

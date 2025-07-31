@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { ArrowRight, Send, Sparkles, Mail, User, MessageCircle } from 'lucide-react';
+import { Send, Sparkles, Mail, User, MessageCircle } from 'lucide-react';
 import { Badge } from '../ui';
 
 export default function ContactComponent() {
@@ -67,10 +67,10 @@ export default function ContactComponent() {
                             Get in Touch
                         </Badge>
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-purple-200 mb-4 tracking-tight">
-                            Let's Connect
+                            Let&apos;s Connect
                         </h2>
                         <p className="text-lg sm:text-xl text-white/70 max-w-xl mx-auto leading-relaxed">
-                            Ready to start something amazing? Drop us a message and let's make it happen.
+                            Ready to start something amazing? Drop us a message and let&apos;s make it happen.
                         </p>
                     </div>
 
@@ -78,7 +78,7 @@ export default function ContactComponent() {
                     <div className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl overflow-hidden relative">
                         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
                         <div className="relative p-8 sm:p-10 lg:p-12">
-                            <div className="space-y-8">
+                            <form className="space-y-8" onSubmit={handleSubmit}>
                                 {/* Name field */}
                                 <div className="group">
                                     <div className="relative">
@@ -163,8 +163,8 @@ export default function ContactComponent() {
                                 {/* Submit button */}
                                 <div className="pt-4">
                                     <button
+                                        type="submit"
                                         className="w-full bg-black text-white font-bold py-5 px-6 text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border-0 group relative overflow-hidden rounded-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                                        onClick={handleSubmit as any}
                                         disabled={status === 'loading'}
                                     >
                                         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -189,7 +189,7 @@ export default function ContactComponent() {
                                 {status === 'success' && (
                                     <div className="flex items-center justify-center gap-2 p-4 bg-green-500/20 border border-green-400/30 rounded-xl backdrop-blur-sm">
                                         <Sparkles className="w-5 h-5 text-green-300" />
-                                        <span className="text-green-100 font-medium">Message sent successfully! We'll be in touch soon.</span>
+                                        <span className="text-green-100 font-medium">Message sent successfully! We&apos;ll be in touch soon.</span>
                                     </div>
                                 )}
                                 {status === 'error' && (
@@ -197,7 +197,7 @@ export default function ContactComponent() {
                                         <span className="text-red-100 font-medium">{error}</span>
                                     </div>
                                 )}
-                            </div>
+                            </form>
                         </div>
                     </div>
 
