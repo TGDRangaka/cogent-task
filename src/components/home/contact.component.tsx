@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Send, Mail, User, MessageCircle, Phone, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { Send, Mail, User, MessageCircle, Clock, CheckCircle } from 'lucide-react';
 import { Badge } from '../ui';
 
 export default function ContactComponent() {

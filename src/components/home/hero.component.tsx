@@ -3,6 +3,7 @@ import React from 'react'
 import { Badge, Button } from '../ui'
 import { ArrowRight, Calendar, MapPin } from 'lucide-react'
 import BlurText from '../ui/blurText'
+import Link from 'next/link'
 
 export default function HeroComponent() {
   return (
@@ -24,7 +25,7 @@ export default function HeroComponent() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           <div className="text-white space-y-6 lg:space-y-8 order-2 lg:order-1">
             <div className="space-y-4 lg:space-y-6">
-              <Badge className="bg-yellow-400 text-black hover:bg-yellow-500 text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 w-fit">
+              <Badge className="bg-yellow-400 !text-black hover:bg-yellow-500 text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 w-fit">
                 EXCLUSIVE EVENT
               </Badge>
               <BlurText
@@ -82,13 +83,15 @@ export default function HeroComponent() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button
-                size="lg"
-                className="bg-yellow-400 flex !text-gray-800 items-center hover:bg-yellow-500 font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-60"
-              >
-                Register Now
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-              </Button>
+              <Link href="#contact" className='cursor-pointer'>
+                <Button
+                  size="lg"
+                  className="bg-yellow-400 flex !text-gray-800 items-center hover:bg-yellow-500 font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-60"
+                >
+                  Register Now
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                </Button>
+              </Link>
               <Button
                 size="lg"
                 variant="outline"
