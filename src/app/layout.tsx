@@ -15,6 +15,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Saudi Arabia's Financial Crime",
   description: "A comprehensive overview of financial crime in Saudi Arabia, including money laundering, fraud, and regulatory measures.",
+  keywords: [
+    "Saudi Arabia",
+    "Financial Crime",
+    "Money Laundering",
+    "Fraud",
+    "Regulatory Measures",
+    "AML",
+    "Compliance",
+    "Financial Compliance",
+    "Vision 2030",
+    "Financial Institutions",
+    "AML Technologies",
+    "Financial Crime Compliance",
+    "Financial Crime Roundtable",
+  ]
 };
 
 export default function RootLayout({
