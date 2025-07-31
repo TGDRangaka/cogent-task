@@ -32,8 +32,8 @@ export default function OverviewComponent() {
                                 <span className="block text-blue-600 animate-text-shimmer">Financial Compliance</span>
                             </h2>
                             <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                                As a global leader in financial investigation and compliance, the Kingdom of Saudi Arabia continues to
-                                set benchmarks in Anti-Money Laundering (AML) and Counter-Terrorism Financing (CTF) practices.
+                                As a global leader in financial innovation and compliance, the Kingdom of Saudi Arabia continues to set benchmarks in Anti-Money Laundering (AML) efficiency and effectiveness. Despite these advancements and spending <span className="font-semibold text-blue-700">$1.10 billion</span> as cost of compliance, the country still lost <span className="font-semibold text-blue-700">5.74% of its gross domestic product (GDP)</span> to money laundering in 2023.<br /><br />
+                                Vision 2030 and the Saudi Central Bank's efforts embrace an innovation-centric, risk-based approach to anti-money laundering. This exclusive roundtable brings together compliance leaders and industry experts to discuss how financial institutions can embrace next-generation AML technologies with a compliance-first approach. Delve into cutting-edge strategies, regulatory updates, and technology trends shaping the future of financial crime compliance in Saudi Arabia.
                             </p>
                         </div>
 
@@ -41,18 +41,18 @@ export default function OverviewComponent() {
                             {[
                                 {
                                     icon: Shield,
-                                    title: "Regulatory Excellence",
-                                    desc: "Discover the latest regulatory changes and technology advancements",
+                                    title: "Vision 2030 & Innovation",
+                                    desc: "Explore how Vision 2030 and the Saudi Central Bank are driving an innovation-centric, risk-based approach to AML.",
                                 },
                                 {
                                     icon: TrendingUp,
-                                    title: "Industry Insights",
-                                    desc: "Learn from industry experts on the evolving compliance landscape",
+                                    title: "$1.10 Billion Compliance Spend",
+                                    desc: "Understand the impact and challenges of Saudi Arabia's $1.10B annual compliance cost and the 5.74% GDP lost to money laundering in 2023.",
                                 },
                                 {
                                     icon: Globe,
-                                    title: "Global Networking",
-                                    desc: "Connect with compliance professionals from across the region",
+                                    title: "Next-Gen AML Technologies",
+                                    desc: "Delve into next-generation AML technologies, regulatory updates, and strategies for a compliance-first future.",
                                 },
                             ].map((item, index) => (
                                 <div
